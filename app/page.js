@@ -39,6 +39,7 @@ const LoginPage = () => {
 
   return (
     <div className={styles.container}>
+      <div>
       <img src="notredame-logo.png" alt="Logo NotreDame" />
       <h1>Login</h1>
       <form className={styles.form} onSubmit={handleLogin}>
@@ -67,6 +68,7 @@ const LoginPage = () => {
       <Link href="/Cadastro">
         <p>Ainda não tem cadastro? Cadastre-se aqui</p>
       </Link>
+    </div>
     </div>
   );
 };

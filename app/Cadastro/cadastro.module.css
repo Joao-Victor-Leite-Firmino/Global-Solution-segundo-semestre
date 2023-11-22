@@ -10,9 +10,11 @@
     background-size: cover;
   }
 
-.div{
-    background-color: #ffffff;
-    border:#000000;
+.container div{
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 .container h1 {
