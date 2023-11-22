@@ -40,31 +40,33 @@ const CadastroPage = () => {
 
   return (
     <div className={styles.container}>
-      <img className="logo" src="notredame-logo.png" alt="Logo NotreDame" />
-      <h1 className="titulo">Cadastro</h1>
-      <form className={styles.form} onSubmit={handleCadastro}>
-        <label htmlFor="cpf">CPF:</label>
-        <input
-          type="text"
-          id="cpf"
-          name="cpf"
-          value={cpf}
-          onChange={(e) => setCpf(e.target.value)}
-        />
-        <br /><br />
-        <label htmlFor="senha">Senha:</label>
-        <input
-          type="password"
-          id="senha"
-          name="senha"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-        />
-        <br /><br />
-        <Link href="/Login">
-          <input type="submit" value="Cadastrar" />
-        </Link>
-      </form>
+      <div className="div">
+        <img className="logo" src="notredame-logo.png" alt="Logo NotreDame" />
+        <h1 className="titulo">Cadastro</h1>
+          <form className={styles.form} onSubmit={handleCadastro}>
+          <label htmlFor="cpf">CPF:</label>
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            value={cpf}
+            onChange={(e) => setCpf(e.target.value)}
+          />
+          <br /><br />
+          <label htmlFor="senha">Senha:</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+          <br /><br />
+          <Link href="/Login">
+            <input type="submit" value="Cadastrar" />
+          </Link>
+        </form>
+      </div>
     </div>
   );
 };
