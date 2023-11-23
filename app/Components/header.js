@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Header = styled.header`
   width: 100%;
-  height: 150px;
+  height: 100%;
   background-color: #d1d1d1;
   border-Bottom: 1px solid #006094;
   display: flex;
@@ -32,7 +32,7 @@ const Lista = styled.ul`
 `
 
 const Opcao = styled.li`
-    padding: 0 30px;
+    padding: 0 10px;
 `
 
 const header = () => {
