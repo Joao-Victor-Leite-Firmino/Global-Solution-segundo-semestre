@@ -11,7 +11,7 @@ const App = () => {
       { text: "Perfis", href: "/atendimentos" },
     ];
     const buttons = [
-        { image: "consulta-de-pesquisa.png", text: "Triagem" },
+        { image: "consulta-de-pesquisa.png", text: "Triagem"},
         { image: "medico.png", text: "Atendimento" },
         { image: "historia (1).png", text: "Histórico médico" },
       ];
