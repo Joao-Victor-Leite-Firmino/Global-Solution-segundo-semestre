@@ -2,6 +2,7 @@
 
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Header = styled.header`
   width: 100%;
@@ -18,7 +19,7 @@ const Logo = styled.img`
     margin: 20px 0 20px 20px;
 `
 
-const Link = styled.a`
+const Conexao = styled.a`
     color: #000000;
     font-Size: 30px;
     text-Decoration: none;
@@ -42,14 +43,14 @@ const header = () => {
   return (
     <div>
       <Header>
-        <a href="/">
+        <Link href="/Home">
           <Logo src="notredame-logo.png" alt="Logo" />
-        </a>
+        </Link>
         <nav>
           <Lista>
             {menu.map((item, index) => (
               <Opcao key={index}>
-                <Link href={item.href}>{item.text}</Link>
+                <Conexao href={item.href}>{item.text}</Conexao>
               </Opcao>
             ))}
           </Lista>
