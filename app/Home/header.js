@@ -6,8 +6,10 @@ import styled from "styled-components";
 const Header = styled.header`
   width: 100%;
   height: 150px;
+  background-color: #d1d1d1;
   border-Bottom: 1px solid #006094;
   display: flex;
+  align-items: center;
   `
 
 const Logo = styled.img`
@@ -18,9 +20,9 @@ const Logo = styled.img`
 
 const Link = styled.a`
     color: #000000;
-    font-Size: 16px;
+    font-Size: 30px;
     text-Decoration: none;
-    
+    font-family: Arial, Helvetica, sans-serif;
 `
 
 const Lista = styled.ul`
@@ -29,13 +31,12 @@ const Lista = styled.ul`
 `
 
 const Opcao = styled.li`
-    padding-right: 20px;
+    padding: 0 30px;
 `
 
 const header = () => {
   const menu = [
-    { text: "Atendimentos", href: "/atendimentos" },
-    { text: "Histórico médico", href: "/historico-medico" },
+    { text: "Perfis", href: "/atendimentos" },
   ];
 
   return (
