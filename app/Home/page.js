@@ -6,8 +6,7 @@ import ImageComponent from "../Components/imagem";
 
 const App = () => {
     const menu = [
-      { text: "Atendimentos", href: "/atendimentos" },
-      { text: "Histórico médico", href: "/historico-medico" },
+      { text: "Perfis", href: "/atendimentos" },
     ];
   
 
