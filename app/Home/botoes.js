@@ -4,19 +4,19 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Button = styled.button`
-  width: 50%;
-  height: 100px;
+  width: 100%;
+  height: 200px;
   margin: 10px;
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000000;
   font-size: 24px;
-  font-weight: 500;
 
   &:hover {
     background-color: #f5f5f5;
@@ -27,22 +27,35 @@ const Button = styled.button`
   }
 
   .icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
   }
 
-  @media (max-width: 768px) {
+  & > button {
+    padding: 5px;
+  }
+
+  @media (min-width: 768px) {
     width: 200px;
-    margin: 0 10px;
+    height: 200px;
+  }
+
+  @media (min-width: 992px) {
+    width: 500px;
+    height: 150px;
   }
 `;
 
 const ImagemBotao = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: 992px) {
     width: 30px;
     height: 30px;
   }
@@ -50,16 +63,16 @@ const ImagemBotao = styled.img`
 
 const Buttons = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
 
   & > button {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    /* No media query for max-width: 768px */
   }
 `;
 
@@ -85,4 +98,5 @@ const App = () => {
 };
 
 export default App;
+
 
