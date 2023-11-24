@@ -37,44 +37,41 @@ const ListarSintomas = () => {
     <div>
       <Header />
 
-      <h1>Listar sintomas</h1>
+      <h1 className={styles.h1}>Atendimento</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+      <form className={styles.formbody} onSubmit={handleSubmit}>
+        <div className={styles.div}>
           <label htmlFor="sintomas">Sintomas</label>
-          <input
-            type="text"
-            class="form-control"
-            id="sintomas"
-            name="sintomas"
-            value={sintomas}
-            onChange={(e) => setSintomas(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label for="intensidade">Intensidade</label>
-          <select
-            class="form-control"
-            id="intensidade"
-            name="intensidade"
-            value={intensidade}
-            onChange={(e) => setIntensidade(e.target.value)}
-          >
-            <option value="leve">Leve</option>
-            <option value="moderada">Moderada</option>
-            <option value="grave">Grave</option>
+          <select id="sintomas" name="sintomas" value={sintomas} onChange={(e) => setSintomas(e.target.value)}>
+            <option value="">Selecione um sintoma</option>
+            <option value="DOR_DE_CABECA">Dor de cabeça</option>
+            <option value="FEBRE">Febre</option>
+            <option value="PRESSAO_ALTA">Pressão alta</option>
+            <option value="NAUSEAS">Náuseas</option>
+            <option value="TOSSE">Tosse</option>
+            <option value="FADIGA">Fadiga</option>
+            <option value="DOR_ABDOMINAL">Dor abdominal</option>
+            <option value="DOR_ARTICULACOES">Dor nas articulações</option>
+            <option value="DIFICULDADE_RESPIRATORIA">Dificuldade respiratória</option>
+            <option value="INSONIA">Insônia</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <div className={styles.form}>
+          <label for="intensidade">Intensidade</label>
+          <select id="intensidade" name="intensidade" value={intensidade} onChange={(e) => setIntensidade(e.target.value)}>
+            <option value="">Selecione a intensidade</option>
+            {Array.from({ length: 10 }, (_, i) => i + 1).map((value) => (
+              <option key={value} value={value}>{value}</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.button}> 
+        <button className={styles.b} type="submit" class="btn btn-primary">Enviar</button>
+        </div>
       </form>
-
       <Footer />
     </div>
   );
 };
 
 export default ListarSintomas;
-
-
-
-
