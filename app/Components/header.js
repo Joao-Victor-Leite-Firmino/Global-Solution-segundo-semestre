@@ -31,37 +31,6 @@ const Logo = styled.img`
   }
 `;
 
-const Conexao = styled.a`
-  color: #000000;
-  font-size: 30px;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
-`;
-
-const Lista = styled.ul`
-  display: flex;
-  list-style-type: none;
-
-  @media (max-width: 768px) {
-    display: flex-wrap;
-    justify-content: center;
-    margin-top: 20px;
-  }
-`;
-
-const Opcao = styled.li`
-  padding: 0 10px;
-
-  @media (max-width: 768px) {
-    padding: 0 5px;
-    margin-bottom: 10px;
-  }
-`;
-
 const header = () => {
   const menu = [
     { text: "Perfis", href: "/atendimentos" },
@@ -73,15 +42,6 @@ const header = () => {
         <Link href="/Home">
           <Logo src="notredame-logo.png" alt="Logo" />
         </Link>
-        <nav>
-          <Lista>
-            {menu.map((item, index) => (
-              <Opcao key={index}>
-                <Conexao href={item.href}>{item.text}</Conexao>
-              </Opcao>
-            ))}
-          </Lista>
-        </nav>
       </Header>
     </div>
   );
