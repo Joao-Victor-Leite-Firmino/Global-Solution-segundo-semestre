@@ -1,4 +1,5 @@
 'use client'
+
 import { useState } from 'react';
 import styles from './page.module.css';
 import Link from 'next/link';
@@ -16,7 +17,7 @@ const LoginPage = () => {
     };
 
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('http://localhost:8050/api/pacientes/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
