@@ -35,8 +35,14 @@ const Button = styled.button`
     padding: 5px;
   }
 
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 200px;
+  }
+
+
   @media (min-width: 768px) {
-    width: 200px;
+    width: 250px;
     height: 200px;
   }
 
@@ -72,7 +78,6 @@ const Buttons = styled.div`
   }
 
   @media (max-width: 768px) {
-    /* No media query for max-width: 768px */
   }
 `;
 
