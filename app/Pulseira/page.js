@@ -1,40 +1,58 @@
 // pages/index.js
 'use client'
 
-import { useState } from "react";
+// pages/index.js
+
+import React from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Header from '../Components/header';
+import Footer from '../Components/footer';
+import styles from './pulseira.module.css'
 
 const IndexPage = () => {
   const [data, setData] = useState(null);
+  const [color, setColor] = useState('');
 
-  // Chama a API do back-end
+  // Fetch data from the backend
   const fetchData = async () => {
-    const response = await fetch("https://api.example.com/data");
+    const response = await fetch('https://api.example.com/data');
     const data = await response.json();
     setData(data);
   };
 
-  // Chama a função fetchData ao inicializar a página
+  // Fetch data on initial render
   useEffect(() => {
     fetchData();
   }, []);
 
-  // Exibe os dados na tela
-  if (data) {
-    return (
-      <div>
-        <h1>Os dados recebidos são:</h1>
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>{item.name}</li>
-          ))}
-        </ul>
+  // Set color
+  useEffect(() => {
+    if (data && data.length > 0) {
+      setColor(data[0].color);
+    }
+  }, [data]);
+
+  return (
+    <>
+      <Header />
+      <div className={styles.div}>
+        <h1>A sua pulseira é:</h1>
+        {data ? (
+          <ul className={styles.pulseira}>
+            {data.map((item) => (
+              <li key={item.id}>{item.name}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>Carregando dados...</p>
+        )}
+        <div/>
       </div>
-    );
-  } else {
-    return (
-      <div>
-        <h1>Os dados ainda não foram recebidos.</h1>
-      </div>
-    );
-  }
+      <Footer />
+    </>
+  );
 };
+
+export default IndexPage;
+

@@ -17,7 +17,7 @@ const LoginPage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8050/api/pacientes/login', {
+      const response = await fetch('http://localhost:8050/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const LoginPage = () => {
 
       if (response.ok) {
         alert('Login bem sucedido!');
-        // Handle successful login here
+         window.location.href = `/Home`;
       } else {
         alert(responseData.message);
       }

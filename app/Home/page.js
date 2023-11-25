@@ -11,8 +11,7 @@ const App = () => {
       { text: "Perfis", href: "/atendimentos" },
     ];
     const buttons = [
-        { image: "consulta-de-pesquisa.png", text: "Triagem"},
-        { image: "medico.png", text: "Atendimento" },
+        { image: "consulta-de-pesquisa.png", text: "Atendimento"},
         { image: "historia (1).png", text: "Histórico médico" },
       ];
   
@@ -27,7 +26,7 @@ const App = () => {
             </Header>
         </div>
         <div className={styles.div}>
-            <ImageComponent src="medicos.jpg" alt="Médicos" width="50%" height="50%" />
+            <ImageComponent src="medicos.jpg" alt="Médicos" width="30%" height="30%" />
             <h1 className={styles.h1}>Como podemos te ajudar?</h1>
             <div>
             <Buttons buttons={buttons} />

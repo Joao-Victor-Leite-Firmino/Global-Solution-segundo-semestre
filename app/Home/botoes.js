@@ -84,8 +84,7 @@ const Buttons = styled.div`
 const App = () => {
   const buttons = [
     { image: "medico.png", text: "Atendimento", href: "/Atendimento" },
-    { image: "historia (1).png", text: "Consultas anteriores", href: "/consultas-anteriores" },
-    { image: "consulta-de-pesquisa.png", text: "Histórico médico", href: "/historico-medico" },
+    { image: "consulta-de-pesquisa.png", text: "Histórico médico", href: "/Historico" },
   ];
 
   return (

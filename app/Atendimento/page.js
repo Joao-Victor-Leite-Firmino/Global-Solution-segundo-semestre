@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Header from "../Components/header"; 
 import Footer from "../Components/footer"
 import styles from "./atendimento.module.css";
+import Link from "next/link";
 
 const ListarSintomas = () => {
   const [sintomas, setSintomas] = useState([]);
@@ -17,7 +18,7 @@ const ListarSintomas = () => {
     };
 
     // Enviar os dados para o back-end
-    fetch("/api/sintomas", {
+    fetch("http://localhost:8050/triagem/realizar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +67,9 @@ const ListarSintomas = () => {
           </select>
         </div>
         <div className={styles.button}> 
+        <Link href="/Pulseira">
         <button className={styles.b} type="submit" class="btn btn-primary">Enviar</button>
+        </Link>
         </div>
       </form>
       <Footer />
